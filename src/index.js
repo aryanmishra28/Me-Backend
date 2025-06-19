@@ -8,17 +8,7 @@ dotenv.config({
     path: "./.env"
  })
 
-
-
 connectDB()
-
-
-
-
-
-
-
-
 
 /*
 import express from "express";
