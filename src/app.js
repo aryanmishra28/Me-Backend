@@ -3,12 +3,9 @@ import express from "express"  //  web framework for building APIs and web apps 
 
 import cors from "cors"    // allow backend to be accessed by frontend
 // the CORS middleware — used to allow requests from other domains or frontends.
-
 // For example, if your frontend is at http://localhost:3000 and your backend is at http://localhost:5000, you need CORS to allow the frontend to talk to the backend.
 
-
 import cookieParser from "cookie-parser" //This middleware allows you to **read cookies** sent by the client (used in login, sessions, etc.).
-
 
 const app = express()
 
@@ -18,8 +15,6 @@ app.use(cors(
         credentials: true,
     }
 ))
-
-
 // ✅ **CORS Setup**:
 // - Allows **cross-origin requests** (from frontend).
 // - `origin: process.env.CORS_ORIGIN`: Allows requests only from your allowed frontend domain (you’ll set this in `.env`, like `http://localhost:3000`)
@@ -42,8 +37,6 @@ app.use(express.urlencoded({
 }))
 app.use(express.static("public"))
 app.use(cookieParser())
-
-
 
 
 //routes
