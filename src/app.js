@@ -25,9 +25,7 @@ app.use(cors(
 // CORS_ORIGIN=http://localhost:3000
 
 
-app.use(express.json({
-    limit: "10kb"
-}))
+app.use(express.json({limit: "10kb"}))
 // ✅ Parses **incoming JSON** data from the request body.
 // 💡 `limit: "10kb"`: Limits the size of the incoming JSON to prevent abuse.
 
