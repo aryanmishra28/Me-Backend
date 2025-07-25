@@ -40,6 +40,14 @@ app.use(cookieParser())
 //routes
 import userRoutes from "./routes/user.routes.js"
 
+// 💡 So, what's happening?
+// ✅ You're importing a group of routes from user.routes.js
+// ✅ You assign it the name userRoutes
+// ✅ Then you tell your Express app:
+// “Use this group of routes, and prefix them with /api/v1/users.”
+
+
+
 //routes declaration
 app.use("/api/v1/users", userRoutes)
 

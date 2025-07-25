@@ -110,7 +110,12 @@ return res.status(201).json(
 })
 
 
-export { registerUSer }
+const loginUser = asyncHandler(async (req, res) => {
+
+    });
+
+
+export { registerUSer, loginUser }
 
 
 

@@ -42,3 +42,43 @@ export default router
 // registerUSer() (handles user creation)
 //        ↓
 // Saves to DB → Sends response
+
+
+//Method 2
+// import express from "express";  //You’re importing Express so you can create a router.
+// import { registerUser } from "../controllers/user.controller.js";
+// import upload from "../middlewares/multer.middleware.js";
+
+// const router = express.Router();  //because imported express to create router
+
+// route => /api/v1/users/register
+// router.post("/register", upload.fields([
+//   { name: "avatar", maxCount: 1 },
+//   { name: "coverImage", maxCount: 1 },
+// ]), registerUser);
+
+// export default router;
+
+
+
+// ✅ Option 1:
+// import express from "express";
+// const router = express.Router();
+// ✅ What's happening:
+// You're importing the entire express module
+// Then using express.Router() to create the router
+
+// ✅ Common when:
+// You need to use multiple features of Express (e.g., express.json(), express.static())
+// You want simplicity in small files
+
+// ✅ Option 2:
+// import { Router } from "express";
+// const router = Router();
+// ✅ What's happening:
+// This is destructuring only the Router function directly from Express
+// Then you use Router() without needing the whole module
+
+// ✅ Common when:
+// You only need the Router (nothing else from express)
+// You're aiming for minimal, clean imports in modular route files
