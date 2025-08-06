@@ -23,6 +23,11 @@ router.route("/register").post(
 // | `registerUSer`              | Calls your controller to handle the rest (validation, DB save, etc.) |
 //User enters → clerk collects avatar + cover → passes to receptionist → receptionist checks info → registers user.
 
+router.route("/login").post(loginUser)
+
+//Secured routes
+
+router.route("/logout").post(verifyJWT, logoutUser)
 
 export default router
 
